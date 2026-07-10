@@ -35,6 +35,9 @@ class Solution {
         // }
 
         // better approach
+        // time -> O(m*n)
+        // space -> O(m+n)
+        
         int m = matrix.length;
         int n = matrix[0].length;
 
