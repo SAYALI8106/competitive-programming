@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/SAYALI8106/competitive-programming/tree/master/0001-two-sum) |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/SAYALI8106/competitive-programming/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0073-set-matrix-zeroes](https://github.com/SAYALI8106/competitive-programming/tree/master/0073-set-matrix-zeroes) |
 | [0128-longest-consecutive-sequence](https://github.com/SAYALI8106/competitive-programming/tree/master/0128-longest-consecutive-sequence) |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/SAYALI8106/competitive-programming/tree/master/1752-check-if-array-is-sorted-and-rotated) |
@@ -24,4 +25,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0073-set-matrix-zeroes](https://github.com/SAYALI8106/competitive-programming/tree/master/0073-set-matrix-zeroes) |
+## Two Pointers
+|  |
+| ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/SAYALI8106/competitive-programming/tree/master/0026-remove-duplicates-from-sorted-array) |
 <!---LeetCode Topics End-->
