@@ -76,4 +76,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2149-rearrange-array-elements-by-sign](https://github.com/SAYALI8106/competitive-programming/tree/master/2149-rearrange-array-elements-by-sign) |
+## Database
+|  |
+| ------- |
+| [0176-second-highest-salary](https://github.com/SAYALI8106/competitive-programming/tree/master/0176-second-highest-salary) |
 <!---LeetCode Topics End-->
