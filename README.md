@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/SAYALI8106/competitive-programming/tree/master/0128-longest-consecutive-sequence) |
 | [0189-rotate-array](https://github.com/SAYALI8106/competitive-programming/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/SAYALI8106/competitive-programming/tree/master/0283-move-zeroes) |
+| [0485-max-consecutive-ones](https://github.com/SAYALI8106/competitive-programming/tree/master/0485-max-consecutive-ones) |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/SAYALI8106/competitive-programming/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 ## Hash Table
 |  |
