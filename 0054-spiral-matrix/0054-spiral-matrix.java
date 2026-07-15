@@ -1,5 +1,7 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
+        // time -> O(m*n)
+        // space -> 0(1)
         List<Integer> spiral = new ArrayList<>();
         int top = 0;
         int left = 0;
