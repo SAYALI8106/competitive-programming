@@ -5,11 +5,11 @@ class Solution {
         // time -> O(n^3)
         // space -> O(1)
         // int count = 0;
-        // for (int i = 0; i < nums.length; i++) {
-        //     for (int j = i; j < nums.length; j++) {
+        // for (int startIdx = 0; startIdx < nums.length; startIdx++) {
+        //     for (int endIdx = startIdx; endIdx < nums.length; endIdx++) {
         //         int sum = 0;
 
-        //         for (int idx = i; idx <= j; idx++) {
+        //         for (int idx = startIdx; idx <= endIdx; idx++) {
         //             sum += nums[idx];
         //         }
 
