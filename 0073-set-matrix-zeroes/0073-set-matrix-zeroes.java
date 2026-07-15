@@ -37,27 +37,85 @@ class Solution {
         // better approach
         // time -> O(m*n)
         // space -> O(m+n)
-        
+
+        // int m = matrix.length;
+        // int n = matrix[0].length;
+
+        // boolean rows[] = new boolean[m];
+        // boolean cols[] = new boolean[n];
+
+        // for (int i = 0; i < m; i++) {
+        //     for (int j = 0; j < n; j++) {
+        //         if (matrix[i][j] == 0) {
+        //             rows[i] = true;
+        //             cols[j] = true;
+        //         }
+        //     }
+        // }
+
+        // for (int i = 0; i < m; i++) {
+        //     for (int j = 0; j < n; j++) {
+        //         if (rows[i] || cols[j]) {
+        //             matrix[i][j] = 0;
+        //         }
+        //     }
+        // }
+
+        // optimal approach
+        boolean firstRowZero = false;
+        boolean firstColZero = false;
+
         int m = matrix.length;
         int n = matrix[0].length;
 
-        boolean rows[] = new boolean[m];
-        boolean cols[] = new boolean[n];
-
+        // check if the 1st row has any zero or not
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == 0) {
-                    rows[i] = true;
-                    cols[j] = true;
+                if (matrix[0][j] == 0) {
+                    firstRowZero = true;
+                    break;
                 }
             }
         }
 
+        // check if the 1st col has any zero or not
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (rows[i] || cols[j]) {
+                if (matrix[i][0] == 0) {
+                    firstColZero = true;
+                    break;
+                }
+            }
+        }
+
+        //    set row/col markers for zeroes
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[0][j] = 0;
+                    matrix[i][0] = 0;
+                }
+            }
+        }
+
+        // fill the cell with zero using the markers
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (matrix[i][0] == 0 || matrix[0][j] == 0) {
                     matrix[i][j] = 0;
                 }
+            }
+        }
+
+        if (firstRowZero) {
+            for (int i = 0; i < n; i++) {
+                matrix[0][i] = 0;
+            }
+        }
+
+        if (firstColZero) {
+            for (int i = 0; i < m; i++) {
+                matrix[i][0] = 0;
             }
         }
     }
