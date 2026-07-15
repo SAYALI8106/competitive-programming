@@ -1,37 +1,67 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
+
+        // brute force
+        // time -> O(n^3)
+        // space -> O(1)
         // int count = 0;
-        // int sum = 0;
-        // HashMap<Integer, Integer> prefixSumMap = new HashMap<>();
         // for (int i = 0; i < nums.length; i++) {
-        //     sum += nums[i];
-        //     if (sum == k) {
-        //         count++;
+        //     for (int j = i; j < nums.length; j++) {
+        //         int sum = 0;
+
+        //         for (int idx = i; idx <= j; idx++) {
+        //             sum += nums[idx];
+        //         }
+
+        //         if (sum == k) {
+        //             count++;
+        //         }
         //     }
-
-        //     int remaining = sum - k;
-
-        //     if (prefixSumMap.containsKey(remaining)) {
-        //         count += prefixSumMap.get(remaining);
-        //     }
-
-        //     prefixSumMap.put(sum, prefixSumMap.getOrDefault(sum, 0) + 1);
-
         // }
+
+        //     return count;
+
+        // // return count;
+
+        // // better approach
+        // time -> O(n^2)
+        // space -> O(1)
+        // int count = 0;
+        // for (int i = 0; i < nums.length; i++) {
+        //     int sum = 0;
+        //     for (int j = i; j < nums.length; j++) {
+        //         sum += nums[j];
+        //         if (sum == k) {
+        //             count++;
+        //         }
+        //     }
+        // }
+
         // return count;
 
+        // optimal approach
+        // time -> O(n)
+        // space-> O(n)
         int count = 0;
-        for(int i = 0; i < nums.length; i++){
-            int sum = 0;
-            for(int j = i; j < nums.length; j++){
-               sum+= nums[j];
-               if(sum==k){
+        int sum = 0;
+        HashMap<Integer, Integer> prefixSumMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            if (sum == k) {
                 count++;
-               }
             }
-        }
 
+            int remaining = sum - k;
+
+            if (prefixSumMap.containsKey(remaining)) {
+                count += prefixSumMap.get(remaining);
+            }
+
+            prefixSumMap.put(sum, prefixSumMap.getOrDefault(sum, 0) + 1);
+
+        }
         return count;
+
     }
 }
 
