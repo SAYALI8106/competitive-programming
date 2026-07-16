@@ -16,29 +16,28 @@ class Solution {
 
         // return triangle.get(rowIndex);
 
-        // public long findnCr(int n, int r) {
-        //     long res = 1;
-        //     for (int i = 0; i < r; i++) {
-        //         res = res * (n - i);
-        //         res = res / (i + 1);
-        //     }
-        //     return res;
-        // }
+        List<Integer> row = new ArrayList<>();
 
-         List<Integer> row = new ArrayList<>();
+        for (int i = 0; i <= rowIndex; i++) {
 
-        long res = 1;
-
-        row.add((int) res);
-
-        for (int i = 1; i <= rowIndex; i++) {
-
-            res = res * (rowIndex - i + 1) / i;
-
+            // res = res * (rowIndex - i + 1) / i;
+            long res = findnCr(rowIndex, i);
             row.add((int) res);
         }
 
         return row;
+    }
+
+    public long findnCr(int r, int c) {
+
+        long res = 1;
+
+        for (int i = 0; i < c; i++) {
+            res = res * (r - i);
+            res = res / (i + 1);
+        }
+
+        return res;
     }
 }
 
