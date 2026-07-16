@@ -1,5 +1,8 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
+
+        // time -> O(n^2)
+        // space -> O(n^2)
         List<List<Integer>> triangle = new ArrayList<>();
 
         for (int i = 0; i < numRows; i++) {
