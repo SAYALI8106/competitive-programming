@@ -16,16 +16,18 @@ class Solution {
 
         // return triangle.get(rowIndex);
 
+        //  time -> O(n^2)
+        // space -> O(n)
         List<Integer> row = new ArrayList<>();
 
         for (int i = 0; i <= rowIndex; i++) {
 
-            // res = res * (rowIndex - i + 1) / i;
             long res = findnCr(rowIndex, i);
             row.add((int) res);
         }
 
         return row;
+
     }
 
     public long findnCr(int r, int c) {
