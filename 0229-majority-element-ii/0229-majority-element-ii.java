@@ -21,6 +21,8 @@ class Solution {
 
         // return list;
 
+        // time -> O(n)
+        // space -> O(n)
         HashMap<Integer, Integer> map = new HashMap<>();
         List<Integer> list = new ArrayList<>();
         int n = nums.length;
