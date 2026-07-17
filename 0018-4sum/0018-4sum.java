@@ -21,8 +21,9 @@ class Solution {
 
         // return new ArrayList<>(set);
 
-        // time -> O(n^3)
-        // space -> 0(n)+O(2*no. quaduplets)
+        // Time Complexity: O(n^3)
+        // Space Complexity: O(n) auxiliary + O(k) for storing the answer,
+        // where k is the number of unique quadruplets.
         Set<List<Integer>> set = new HashSet<>();
         int n = nums.length;
         for (int a = 0; a < n; a++) {
