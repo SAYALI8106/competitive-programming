@@ -23,22 +23,17 @@ class Solution {
         // return new ArrayList<>(st);
 
         Set<List<Integer>> st = new HashSet<>();
-        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
+            Set<Integer> set = new HashSet<>();
             for (int j = i + 1; j < nums.length; j++) {
                 int complement = -(nums[i] + nums[j]);
-                if (map.containsKey(complement) && map.get(complement) != i && map.get(complement) != j) {
-                    List<Integer> temp = new ArrayList<>();
-                    temp.add(nums[i]);
-                    temp.add(nums[j]);
-                    temp.add(complement);
+                if (set.contains(complement)) {
+                    List<Integer> temp = Arrays.asList(nums[i], nums[j], complement);
                     Collections.sort(temp);
                     st.add(temp);
                 }
-
-                map.put(nums[j], j);
-
+                set.add(nums[j]);
             }
 
         }
