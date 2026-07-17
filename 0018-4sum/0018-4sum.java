@@ -46,7 +46,7 @@ class Solution {
         // return new ArrayList<>(set);
 
         // Optimal approach
-        //    time -> O(n^3)
+        //    time -> O(n^3)+O(nlogn)
         // space -> O(k)  //space to store the quads not to solve the problem
         List<List<Integer>> list = new ArrayList<>();
         int n = nums.length;
