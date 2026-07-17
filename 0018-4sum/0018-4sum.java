@@ -21,7 +21,7 @@ class Solution {
 
         // return new ArrayList<>(set);
 
-        // Time Complexity: O(n^3)
+        // Time Complexity: O(n^3*logm)
         // Space Complexity: O(n) auxiliary + O(k) for storing the answer,
         // where k is the number of unique quadruplets.
 
@@ -46,7 +46,8 @@ class Solution {
         // return new ArrayList<>(set);
 
         // Optimal approach
-
+        //    time -> O(n^3)
+        // space -> O(k)  //space to store the quads not to solve the problem
         List<List<Integer>> list = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums);
