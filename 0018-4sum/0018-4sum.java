@@ -47,7 +47,9 @@ class Solution {
 
         // Optimal approach
         // time -> O(n^3)+ O(nlogn)
-        // space -> O(k)  //space to store the quads not to solve the problem
+        // space -> 
+        // Auxiliary: O(log n) due to sorting recursion (often written as O(1))
+        // Output: O(k), where k is the number of unique quadruplets.
         List<List<Integer>> list = new ArrayList<>();
         int n = nums.length;
         Arrays.sort(nums);
