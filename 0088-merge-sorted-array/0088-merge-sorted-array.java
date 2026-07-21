@@ -3,8 +3,8 @@ class Solution {
         // time -> O(n^2)
         // space -> O(1)
 
-        // if (n == 0)
-        //     return;
+        if (n == 0)
+            return;
 
         for (int i = 0; i < n; i++) {
             int insertPos = 0;
