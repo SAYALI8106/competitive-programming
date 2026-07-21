@@ -1,8 +1,11 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        // if (n == 0)
-        //     return;
-        int idx = 0;
+        // time -> O(n^2)
+        // space -> O(1)
+
+        if (n == 0)
+            return;
+
         for (int i = 0; i < n; i++) {
             int insertPos = 0;
             while (insertPos < m && nums1[insertPos] <= nums2[i])
