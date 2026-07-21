@@ -31,8 +31,10 @@ class Solution {
 
         // return res;
 
+        // optimal approach
         // time -> O(n * logn) + O(n)
         // space - > O(n)
+        
         List<List<Integer>> list = new ArrayList<>();
         int n = intervals.length;
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
@@ -42,14 +44,14 @@ class Solution {
             int start = intervals[i][0];
             int end = intervals[i][1];
 
-            if (!list.isEmpty() && list.get(list.size() - 1).get(1) >= start) {
+            if (list.isEmpty() || list.get(list.size() - 1).get(1) < start) {
 
-                end = Math.max(end, list.get(list.size() - 1).get(1));
-                list.get(list.size() - 1).set(1, end);
+                list.add(Arrays.asList(start, end));
 
             } else {
 
-                list.add(Arrays.asList(start, end));
+                end = Math.max(end, list.get(list.size() - 1).get(1));
+                list.get(list.size() - 1).set(1, end);
 
             }
         }
