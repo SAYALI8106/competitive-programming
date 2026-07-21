@@ -21,12 +21,15 @@ class Solution {
         // }
 
         // optimal approach
+        // time -> O(m+n)
+        // space -> O(1)
 
         int k = m + n - 1;
         int i = m - 1;
         int j = n - 1;
 
-        if(n==0) return;
+        if (n == 0)
+            return;
 
         while (i >= 0 && j >= 0) {
             if (nums1[i] > nums2[j]) {
@@ -36,7 +39,7 @@ class Solution {
             }
         }
 
-        while(j>=0){
+        while (j >= 0) {
             nums1[k--] = nums2[j--];
         }
 
@@ -49,7 +52,6 @@ class Solution {
 //  j = 
 
 //nums1 = [0] m =0 nums2 = [1] n = 1
-
 
 // Output
 // [0]
