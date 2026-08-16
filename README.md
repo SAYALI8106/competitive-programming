@@ -118,4 +118,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0704-binary-search](https://github.com/SAYALI8106/competitive-programming/tree/master/0704-binary-search) |
+## Linked List
+|  |
+| ------- |
+| [0237-delete-node-in-a-linked-list](https://github.com/SAYALI8106/competitive-programming/tree/master/0237-delete-node-in-a-linked-list) |
 <!---LeetCode Topics End-->
