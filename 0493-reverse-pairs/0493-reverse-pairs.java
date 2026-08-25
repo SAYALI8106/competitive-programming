@@ -1,8 +1,11 @@
 class Solution {
 
+    // Optimal approach 
+    // time -> O(n * logn)
+    // space -> O(n)
+
     public static int countPairs(int nums[], int low, int mid, int high) {
         int count = 0;
-        int left = low;
         int right = mid + 1;
 
         for (int i = low; i <= mid; i++) {
