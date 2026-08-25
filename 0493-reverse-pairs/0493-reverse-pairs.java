@@ -7,7 +7,7 @@ class Solution {
 
         for (int i = low; i <= mid; i++) {
 
-            while (right <= high && (long)nums[i] > 2L * nums[right])
+            while (right <= high && (long) nums[i] > 2L * nums[right])
                 right++;
 
             count += (right - (mid + 1));
