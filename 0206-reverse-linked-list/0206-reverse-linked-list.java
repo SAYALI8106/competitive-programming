@@ -30,17 +30,41 @@ class Solution {
 
         // return head;
 
-        ListNode temp = head;
-        ListNode prev = null;
+        // time -> O(n)
+        // space -> O(1)
 
-        while(temp!=null){
-            ListNode front = temp.next;
-            temp.next = prev;
-            prev = temp;
-            temp = front;
+        // ListNode temp = head;
+        // ListNode prev = null;
+
+        // while (temp != null) {
+        //     ListNode front = temp.next;
+        //     temp.next = prev;
+        //     prev = temp;
+        //     temp = front;
+        // }
+
+        // return prev;
+
+        // recursive approach
+
+        if(head==null || head.next == null){
+            return head;
         }
 
-        return prev;
+        ListNode newHead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+
+        // [1,2,3,4,5]
+        // [2,3,4,5]
+        // [3,4,5]
+        // [4,5]
+        // [5]
+
+        // [5]
+        // [5->4]
     }
 }
 
