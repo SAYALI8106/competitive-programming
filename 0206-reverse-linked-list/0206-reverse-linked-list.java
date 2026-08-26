@@ -47,14 +47,22 @@ class Solution {
 
         // recursive approach
 
-        if(head==null || head.next == null){
+        if (head == null || head.next == null) {
             return head;
         }
 
         ListNode newHead = reverseList(head.next);
-        head.next.next = head;
+        
+        // store the front node
+        ListNode front = head.next;
+
+        // point the next node to the current node
+        front.next = head;
+
+        // remove the forward link
         head.next = null;
 
+        // return the new head
         return newHead;
 
         // [1,2,3,4,5]
