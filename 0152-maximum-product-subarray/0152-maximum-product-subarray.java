@@ -25,34 +25,60 @@ class Solution {
         // return maxProd;
 
         // optimal approach
+        // time -> O(n)
+        // space -> O(1)
 
-        int max1 = nums[0];
-        int curr = 1;
+        // int max1 = nums[0];
+        // int curr = 1;
 
-        for (int i = 0; i < nums.length; i++) {
+        // for (int i = 0; i < nums.length; i++) {
 
-            if (curr == 0) {
-                curr = 1;
+        //     if (curr == 0) {
+        //         curr = 1;
+        //     }
+
+        //     curr *= nums[i];
+        //     max1 = Math.max(max1, curr);
+        // }
+
+        // int max2 = nums[nums.length - 1];
+        // curr = 1;
+
+        // for (int i = nums.length - 1; i >= 0; i--) {
+
+        //     if (curr == 0) {
+        //         curr = 1;
+        //     }
+
+        //     curr *= nums[i];
+        //     max2 = Math.max(max2, curr);
+        // }
+
+        // return Math.max(max1, max2);
+
+        int pre, suff;
+        pre = suff = 1;
+        int ans = Integer.MIN_VALUE;
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+
+            if (pre == 0) {
+                pre = 1;
             }
 
-            curr *= nums[i];
-            max1 = Math.max(max1, curr);
-        }
-
-        int max2 = nums[nums.length - 1];
-        curr = 1;
-
-        for (int i = nums.length - 1; i >= 0; i--) {
-
-            if (curr == 0) {
-                curr = 1;
+            if (suff == 0) {
+                suff = 1;
             }
 
-            curr *= nums[i];
-            max2 = Math.max(max2, curr);
+            pre *= nums[i];
+            suff *= nums[n - i - 1];
+
+            ans = Math.max(ans, Math.max(pre, suff));
         }
 
-        return Math.max(max1, max2);
+        return ans;
+
     }
 }
 
