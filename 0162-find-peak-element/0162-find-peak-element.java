@@ -18,6 +18,8 @@ class Solution {
 
         //     return -1;
 
+        // TC: O(log N)
+        // SC: O(1)
         int n = nums.length;
 
         if (n == 1)
@@ -37,13 +39,12 @@ class Solution {
 
             if (nums[mid] > nums[mid - 1] && nums[mid] > nums[mid + 1])
                 return mid;
-
-            if (nums[mid] > nums[mid-1]) {
+            else if (nums[mid] > nums[mid - 1])
                 low = mid + 1;
-            } else {
+            else
                 high = mid - 1;
-            }
         }
+
         return -1;
     }
 }
