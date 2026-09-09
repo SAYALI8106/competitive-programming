@@ -1,33 +1,6 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
 
-        // brute force worst approach
-        // TC = O(n^2)
-        // SC = O(1)
-
-        // if (nums.length == 1)
-        //     return nums[0];
-
-        // int single = -1;
-        // for (int i = 0; i < nums.length; i++) {
-
-        //     int frequency = 0;
-
-        //     for (int j = 0; j < nums.length; j++) {
-        //         if (nums[i] == nums[j]) {
-        //             frequency++;
-        //         }
-        //     }
-
-        //     if (frequency == 1) {
-        //         single = nums[i];
-        //         break;
-        //     }
-
-        // }
-
-        // return single;
-
         // brute force better approach 1
         // TC: O(n)
         // SC: O(1)
