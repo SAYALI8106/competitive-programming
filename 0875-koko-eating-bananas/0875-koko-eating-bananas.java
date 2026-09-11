@@ -26,9 +26,9 @@ class Solution {
 
         // return k;
 
-        // TC: O(max[piles]*log N)
+        // TC: O(N) * O(log(max[piles]))
         // SC: O(1)
-        
+
         int max = 0;
         int k = 0;
 
