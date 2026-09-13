@@ -20,6 +20,7 @@ class Solution {
 
         // TC: O(log N)
         // SC: O(1)
+        
         int n = nums.length;
 
         if (n == 1)
